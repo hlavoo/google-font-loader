@@ -5,7 +5,7 @@
         i;
 
     for (i = 0; i < linksCount; i++) {
-        if (!!links[i].dataset.fonts) {
+        if (!!links[i].dataset.fonts && links[i].href.indexOf('fonts.googleapis') !== -1) {
             links[i].href = 'https://fonts.googleapis.com/css?family=' + links[i].dataset.fonts;
         }
     }
